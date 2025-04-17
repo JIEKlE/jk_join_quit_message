@@ -1,0 +1,6 @@
+name: jk_join_quit_message
+version: '${project.version}'
+main: jiekie.JoinQuitMessagePlugin
+api-version: '1.20'
+authors: [Jiekie]
+description: 입·퇴장 메시지 설정 플러그인
