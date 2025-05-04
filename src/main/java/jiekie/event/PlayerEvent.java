@@ -11,20 +11,20 @@ public class PlayerEvent implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
-        e.setJoinMessage(getJoinMessagePrefix() + player.getName());
+        e.setJoinMessage(getRightArrowPrefix() + player.getName());
     }
 
     @EventHandler
-    public void onPlayerJoin(PlayerQuitEvent e) {
+    public void onPlayerQuit(PlayerQuitEvent e) {
         Player player = e.getPlayer();
-        e.setQuitMessage(getQuitMessagePrefix() + player.getName());
+        e.setQuitMessage(getLeftArrowPrefix() + player.getName());
     }
 
-    private String getJoinMessagePrefix() {
-        return "[ " + ChatColor.GREEN + "➕" + ChatColor.WHITE + " ] ";
+    public static String getLeftArrowPrefix() {
+        return "\uA005 ";
     }
 
-    private String getQuitMessagePrefix() {
-        return "[ " + ChatColor.RED + "➖" + ChatColor.WHITE + " ] ";
+    public static String getRightArrowPrefix() {
+        return "\uA006 ";
     }
 }
